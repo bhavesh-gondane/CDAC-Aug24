@@ -1,3 +1,5 @@
+//QUE: Write a program that checks if a given year is a leap year or not using both if-else.
+
 package assignment1_dt4_9;
 
 import java.util.Scanner;
