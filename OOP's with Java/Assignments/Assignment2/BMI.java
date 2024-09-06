@@ -1,3 +1,5 @@
+//QUE: Implement a program that calculates the Body Mass Index (BMI) based on height and weight input using if-else to classify the BMI int categories (underweight, normal weight, overweight,etc).
+
 package assignment1_dt4_9;
 
 import java.util.Scanner;
