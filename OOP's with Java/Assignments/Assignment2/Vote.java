@@ -1,3 +1,5 @@
+//QUE: Write a program that checks if a person is eligible to vote based on their age.
+
 package assignment1_dt4_9;
 
 import java.util.Scanner;
