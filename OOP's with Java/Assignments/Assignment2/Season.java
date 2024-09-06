@@ -1,3 +1,5 @@
+//QUE: Write a program that takes a month (1-12) and prints the corresponding season (Winter, Spring, Summer, Autumn) using a switch case
+
 package assignment1_dt4_9;
 
 import java.util.Scanner;
