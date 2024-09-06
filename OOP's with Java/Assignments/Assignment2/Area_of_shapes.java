@@ -1,3 +1,5 @@
+//QUE: Write a program that allows the user to select a shape (Circle, Square, Rectangle, Triangle) and then calculates the area based on user-provided dimensions using a switch case.
+
 package assignment1_dt4_9;
 
 import java.util.Scanner;
