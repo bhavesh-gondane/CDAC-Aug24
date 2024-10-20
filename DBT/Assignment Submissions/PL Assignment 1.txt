@@ -1,0 +1,80 @@
+1. Write a program that computes the perimeter and the area of a rectangle. Define your own values for the length and width. (Assuming that L and W are the length and width of the rectangle, Perimeter = 2*(L+W) and Area = L*W.
+->
+create procedure rectangle(l float,w float)
+    -> begin
+    -> declare per float;
+    -> declare area float;
+    -> set per=2*(l+w);
+    -> set area=l*w;
+    -> insert into plsql values(per,'Perimeter of rectangle');
+    -> insert into plsql values(area,'Area of rectangle');
+    -> end//
+
+
+2. Write a program that declares an integer variable called num, assigns a value to it, and computes and inserts into the tempp table the value of the variable itself, its square, and its cube.
+->
+create procedure sq_cu()
+    -> begin
+    -> declare num int ;
+    -> declare sq int;
+    -> declare cu int;
+    -> set num=4;
+    -> set sq=num*num;
+    -> set cu=num*num*num;
+    -> insert into plsql values(num,'Number');
+    -> insert into plsql values(sq,'Square');
+    -> insert into plsql values(cu,'Cube');
+    -> end //
+
+
+3. Convert a temperature in Fahrenheit (F) to its equivalent in Celsius (C) and vice versa. The required formulae are:- C= (F-32)*5/9
+F= 9/5*C + 32
+->
+ create procedure degree_far()
+    -> begin
+    -> declare x float default 40.4;
+    -> declare y float default 96.2;
+    -> declare F float;
+    -> declare C float;
+    -> set F=(x*9/5)+32;
+    -> set C=(y-32)*(5/9);
+    -> insert into plsql values(F,'Celcius to farenhite');
+    -> insert into plsql values(C,'Farenhite to celcius');
+    -> end //
+4. Convert a number of inches into yards, feet, and inches. For example, 124 inches equals 3 yards, 1 foot, and 4 inches.
+->create procedure inches()
+    -> begin
+    -> declare x int default 124;
+    -> declare y int;
+    -> declare z int;
+    -> declare p int;
+    -> set y=x/36;
+    -> set x=x%36;
+    -> set z=x/12;
+    -> set x=x%12;
+    -> insert into plsql values(y,'Yards');
+    -> insert into plsql values(z,'Foot');
+    -> insert into plsql values(x,'Inches');
+    -> end//
+
+
+5. Write a program that enables a user to input an integer. The program should then state whether the integer is evenly divisible by 5.
+->
+create procedure divisible(x int)
+    -> begin
+    -> if x%5=0 then
+    -> insert into plsql values(x,'Divisible by 5');
+    -> end if;
+    -> end//
+
+
+6. Your block should read in two real numbers and tell whether the product of the two numbers is equal to or greater than 100.
+->
+mysql> create procedure greater(x int, y int)
+    -> begin
+    -> if x*y=100 then
+    -> insert into plsql values(x*y,'Equal to 100');
+    -> else
+    -> insert into plsql values(x*y,'Not equal to 100');
+    -> end if;
+    -> end//

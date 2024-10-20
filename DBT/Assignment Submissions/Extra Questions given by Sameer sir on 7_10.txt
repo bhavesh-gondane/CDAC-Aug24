@@ -1,0 +1,9 @@
+1) InitCAp
+select concat(upper(substr('bhavESh',1,1)),lower(substr('bhavESh',2))) as int_cap from dual;
+
+2)Center justified
+
+ select concat(lpad('Bhavesh',(80-length('bhavesh'))/2,'*'),rpad('',(80-length('bhavesh'))/2,'*')) as Centre_Justified from dual;
+
+
+3)

@@ -1,0 +1,168 @@
+1. Create the table SEMP with the following structure:-
+EMPNO CHAR(4)
+EMPNAME CHAR(20)
+BASIC FLOAT
+DEPTNO CHAR(2)
+DEPTHEAD CHAR(4)
+--->
+create table SEMP 
+(EMPNO char(4),EMPNAME char(20),BASIC float,DEPTNO char(2),DEPTHEAD char(4));
+
+2. Create the table SDEPT with the following structure:-
+DEPTNO CHAR(2)
+DEPTNAME CHAR(15)
+----->
+create table SDEPT
+(DEPTNO CHAR(2),DEPTNAME CHAR(15));
+
+3. Insert into the SDEPT table the following values:-
+10, Development
+20, Training
+---->
+INSERT into sdept values
+    -> (10,'DEVELOPMENT'),
+    -> (20,'TRAINING');
+
+4. Insert into the SEMP table the following values:-
+0001, SUNIL, 6000, 10
+0002, HIREN, 8000, 20
+0003, ALI, 4000, 10, 0001
+0004, GEORGE, 6000, 0002
+----->
+insert into semp(EMPNO,EMPNAME,BASIC,DEPTNO)
+    -> values (0001,'SUNIL',6000,10),
+    -> (0002,'HIREN',8000,20);
+
+insert into semp values
+    -> (0003,'ALI',4000,10,0001);
+
+insert into semp (EMPNO,EMPNAME,BASIC,DEPTHEAD)
+    -> values (0004,'GEORGE',6000,0002);
+
+
+
+QUESTION:-
+Create S, P, J, SPJ tables as specified below and insert a few rows in each table:-
+SUPPLIER
+(S#, Sname, Status, City)
+-
+S
+PARTS
+(P#, Pname, Color, Weight, City)
+-
+P
+PROJECTS
+(J#, Jname, City)
+-
+J
+SUPPLIER-PARTS-PROJECT
+(S#, P#, J#, Qty)
+-
+SPJ
+Sample data for S# column:- ‘S1’, ‘S2’, ‘S3’, etc.
+Sample data for P# column:- ‘P1’, ‘P2’, ‘P3’, etc.
+Sample data for J# column:- ‘J1’, ‘J2’, ‘J3’, etc.
+Sample data for Status column:- 10, 20, 30, etc.
+
+
+----->
+create table supplier(`S#` varchar(2),Sname varchar(50),Status int,City varchar(50));
+
+insert into supplier values
+    -> ('S1','JSW',10,'Banglore'),
+    -> ('S2','Jindal',20,'Delhi'),
+    -> ('S3','Siebels',30,'New York'),
+    -> ('S4','GEP',30,'Paris');
+
+
+create table Parts(`P#` varchar(2),Pname varchar(50),Color varchar(20),Weight int,City varchar(50));
+
+insert into parts values
+    -> ('P1','Steel Bars','Silver',100,'Nagpur'),
+    -> ('P2','Cement','WHite',80,'Delhi'),
+    -> ('P3','Engine','Brown',50,'Berlin'),
+    -> ('P4','Fuel','Black',150,'Quwait');
+
+
+
+create table Projects(`J#` varchar(2),Jname varchar(50),City varchar(50));
+
+insert into projects values
+    -> ('J1','Project A','Hyderabad'),
+    -> ('J2','Project B','Chennai'),
+    -> ('J3','Project C','Washington DC'),
+    -> ('J3','Project C','Chicago');
+
+
+
+create table SUPPLIER_PARTS_PROJECT(`S#` varchar(2),`P#` varchar(2),`J#` varchar(2),Qty int);
+
+ insert into SUPPLIER_PARTS_PROJECT values
+    -> ('S1','P1','J1',1000),
+    -> ('S2','P2','J2',1300),
+    -> ('S3','P3','J3',1800),
+    -> ('S4','P4','J4',900);
+
+
+
+5. Display all the data from the S table.
+---->
+ select * from supplier;
+
+
+6. Display only the S# and SNAME fields from the S table.
+----->
+select `S#`,Sname from supplier;
+
+
+7. Display the PNAME and COLOR from the P table for the CITY=”BERLIN”.
+----->
+select Pname,Color from Parts
+    -> where city='Berlin';
+
+
+8. Display all the Suppliers from New York.
+---->
+select * from suppliers
+    -> where city='New York';
+
+
+9. Display all the Suppliers from Paris or New York.
+---->
+ select * from supplier
+    -> where city='New York' or city='Paris';
+
+
+10. Display all the Projects in Chicago.
+---->
+select * from projects
+    -> where city='Chicago';
+
+
+11. Display all the Partnames with the weight between 50 and 100 (inclusive of both).
+---->
+select pname from parts
+    -> where weight between 50 and 100;
+
+
+12. Display all the Suppliers with a Status greater than or equal to 20.
+----->
+select * from supplier
+    -> where status>=20;
+
+
+13. Display all the Suppliers except the Suppliers from Paris.
+---->
+select * from supplier
+    -> where city!='Paris';
+
+
+14. Display only the Cities from where the Suppliers come from.
+---->
+select city from supplier;
+
+
+15. Assuming that the Part Weight is in GRAMS, display the same in MILLIGRAMS and KILOGRAMS.
+----->
+select weight/1000 'Kilograms',weight*1000 'Milligrams' from parts;
+
