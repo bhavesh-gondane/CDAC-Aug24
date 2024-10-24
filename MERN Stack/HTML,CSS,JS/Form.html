@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBPS</title>
+    <style>
+        table{
+            background-color: rgb(192, 193, 255);
+        }
+        tr:nth-child(even){
+            background-color: rgb(234, 235, 255);
+        }
+        #i1{
+            color: rgb(0, 41, 123);
+            text-decoration: underline;
+            font-size: 17px;
+        }
+        #i2{
+            color: red;
+            padding-left: 610px;
+            font-size: 15px;
+        }
+        .c1{
+            color: red;
+        }
+        #d1{
+            width: 1000px;
+            /* margin-top: 20px;
+            margin-left: 10px; */
+            margin: auto;
+        }
+        #i9{
+            background: rgb(87, 87, 216);
+            border: none;
+            border-radius: 3px;
+            width: 87px;
+            height: 25px;
+            color: white;
+            margin-left: 915px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <span id="i1">Click here for important points to noted</span>
+        <span id="i2" align="right"> * Mandatory Field </span>
+        <br><br>
+        <table border="2px" style="border: 0cap;">
+            
+            <form action="">
+                <tr>
+                    <td style="width: 200px;">First Name: <span class="c1">*</span></td>
+                    <td> <input type="text"> (Maximum 35 Charactres)</td>
+                </tr>
+                <tr>
+                    <td>Confirm First Name: <span class="c1">*</span></td>
+                    <td><input type="text"> (Maximum 35 Charactres)</td>
+                </tr>
+                <tr>
+                    <td>Middle Name: </td>
+                    <td><input type="text"> (Maximum 35 Charactres)</td>
+                </tr>
+                <tr>
+                    <td>Confirm Middle Name: </td>
+                    <td><input type="text"> (Maximum 35 Charactres)</td>
+                </tr>
+                <tr>
+                    <td>Last Name: </td>
+                    <td><input type="text"> (Maximum 35 Charactres)</td>
+                </tr>
+                <tr>
+                    <td>Confirm Last Name: </td>
+                    <td><input type="text"> (Maximum 35 Charactres)</td>
+                </tr>
+                <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text" width="400px"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>(The Name entered in the online application form should match exactly with the requisite documents (photo ID etc.) to be produced at the time of the examination and interview. You will be debarred from the selection process if there is any discrepancy (difference) in the name entered by you in the online application form and the name printed in the documents produced at the time of examination/interview. However, only 35 characters will be printed in your call letter. Any requests for subsequent changes/consideration regarding any changes will not be entertained.)</td> 
+                </tr>
+                <tr>
+                    <td>Mobile No: <span class="c1">*</span></td>
+                    <td>+91 <input type="text"> (10 digits) <b>Please Do not prefix zero (0)</b></td>
+                </tr>
+                <tr>
+                    <td>Confirm Mobile No: <span class="c1">*</span></td>
+                    <td>+91 <input type="text"> (10 digits) <b>Please Do not prefix zero (0)</b></td>
+                </tr>
+                <tr>
+                    <td>Alternate Number <br> (Mobile no/ Landline No):</td>
+                    <td>+91 <input type="text"> (10 digits) <b>Please Do not prefix zero (0)</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Please note that the mentioned mobile number and email ID will be the only way to notify you of the updates. It is in your own interest that the mobile number and email ID should be valid and should be kept active till the completion of this round of selection process. <b>Any requests for subsequent changes/consideration regarding any changes will not be entertained.</b></td>
+                </tr>
+                <tr>
+                    <td>EMail ID: <span class="c1">*</span></td>
+                    <td><input type="text"> @ <select name="Domain Names" id="" aria-placeholder="Domain names"><option value="">Domain names</option></select> (Maximum 60 Characters) </td>
+                </tr>
+                <tr>
+                    <td>Confirm Email ID: <span class="c1">*</span></td>
+                    <td><input type="text"> (Maximum 60 Characters)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b>Enter the Word in the textbox as in the image</b></td>
+                </tr>
+                <tr>
+                    <td>Security Code: <span class="c1">*</span></td>
+                    <td><input type="text"> <img src="../assets/image_captcha_example.png" alt="" height="15px" width="90"></td>
+                </tr>
+            </form>
+        </table><br>
+        <button id="i9">Save & Next</button>
+    </div>
+</body>
+</html>

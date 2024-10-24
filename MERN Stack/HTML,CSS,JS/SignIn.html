@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body{
+            background: url(../assets/simple-abstract-background-light-white-blue-color-wavy-abstract-background-blue-white-colors_1004791-13.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #container{
+            display: flex;
+            margin-top: 170px;
+            margin-left: 500px;
+            border: 2px solid;
+            width: 600px;
+            height: 370px;
+            border-radius: 25px;
+            /* box-shadow: 10px 10px 9px rgb(185, 185, 185); */
+            
+        }
+        #sign-in{
+            text-align: center;
+            background-color: aliceblue;
+            width: 300px;
+            padding-top: 20px;
+            opacity:90%;
+            border-radius: 25px 0px 0px 25px;
+        }
+        #create{
+            text-align: center;
+            background-color: rgb(64, 132, 196);
+            width: 300px;
+            padding-top: 74px;
+            opacity:80%;
+            border-radius: 0px 25px 25px 0px;
+        }
+        #b2{
+            background-color: rgb(64, 132, 196);
+            border: 2px solid white;
+            width: 100px;
+            height: 30px;
+            border-radius: 12px;
+        }
+        #b1{
+            background-color: rgb(64, 132, 196);
+            border: 2px solid rgb(64, 132, 196);
+            border-radius: 12px;
+            width: 90px;
+            height: 25px;
+        }
+        .c1{
+            margin: 8px;
+            border: rgb(64, 132, 196);
+        }
+        .c2{
+            border: rgb(0, 0, 0);
+        }
+        #sign-in input{
+            border: 2px solid rgb(64, 132, 196);
+            height: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sign-in">
+            <h1>Sign in</h1>
+            <a href="https://github.com/bhavesh-gondane/CDAC-Aug24" class="c1"><img src="../assets/git.png" alt="" height="20px" width="20px" class="c2"></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="c1"><img src="../assets/gmail.png" alt="" height="20px" width="20px" class="c2"></a>
+            <a href="https://www.instagram.com/" class="c1"><img src="../assets/insta.png" alt="" height="20px" width="20px" class="c2"></a>
+            <p>Or sign in using E-Mail Address</p>
+            <input type="email" placeholder="Email"><br><br>
+            <input type="password" placeholder="Password"><br><br>
+            <a href="#">Forgot your password?</a><br><br>
+            <button id="b1">SIGN IN</button>
+        </div>
+
+        <div id="create">
+            <h1>Create,<br>Account!</h1>
+            <p>Sign up if you still don't have an account ...</p>
+            <button id="b2"><b>SIGN UP</b></button>
+        </div>
+    </div>
+</body>
+</html>

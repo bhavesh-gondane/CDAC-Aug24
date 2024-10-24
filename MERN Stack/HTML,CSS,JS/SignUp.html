@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(../assets/parikshak.jpg);
+        }
+        #container{
+            background-color: rgb(164, 155, 155);
+            border: 4px solid;
+            width: 500px;
+            /* margin: auto; */
+            margin-left: 150px;
+            margin-top: 140px;
+            text-align: center;
+            box-shadow: 50px;
+            border-radius: 10px;
+        }
+        label{
+            position: relative;
+            left: -100px;
+            font-size: large;
+            /* color: grey; */
+        }
+        #sign-up{
+            margin-bottom: 15px;
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.4s;
+        }
+        #sign-up :hover{
+            color: black;
+            background-color: white;
+        }
+        input{
+            font-size: 20px;
+        }
+        #heading{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading">Parikshak Sign Up</h1>
+        <form action="">
+            <label for=""><b>Enter First Name:</b></label><br>
+            <input type="text" placeholder="First Name"><br><br>
+            <label for=""><b>Enter Last Name:</b></label><br>
+            <input type="text" placeholder="Last Name" ><br><br>
+            <label for=""><b>Enter Email-ID:</b></label><br>
+            <input type="email" placeholder="Email" ><br><br>
+            <label for=""><b>Enter Password:</b></label><br>
+            <input type="password" placeholder="Password">
+        </form>
+        <p style="font-size: large;">Already a member? <b><a href="">Log In</a></b></p>
+        <input type="submit" value="Sign up" id="sign-up">
+    </div>
+</body>
+</html>
