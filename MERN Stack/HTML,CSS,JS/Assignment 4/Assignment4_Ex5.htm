@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fetchData(url, callback) {
+            console.log("Loading....");
+
+            setTimeout(() => {
+                try {
+                    if (!url.startsWith("https://")) {
+                        throw new Error("Invalid URL format. URL should start with 'https://'");
+                    }
+
+
+                    var res = url;
+                    callback(null, res);
+                } catch (error) {
+                    callback(error.message, null);
+                }
+            }, 2000);
+        }
+
+        function processData(data, callback) {
+            console.log("Processing data...");
+
+            setTimeout(() => {
+                const processedData = data.toUpperCase();
+                callback(null, processedData);
+            }, 2000);
+        }
+
+        fetchData("https://www.google.com", (error, res) => {
+            if (error) {
+                console.log("Error:", error);
+            } else {
+                console.log("Response.:", res);
+
+                processData(res, (error, processedData) => {
+                    if (error) {
+                        console.log("Error:", error);
+                    } else {
+                        console.log("Processed Data:", processedData);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
