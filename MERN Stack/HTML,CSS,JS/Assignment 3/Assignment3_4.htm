@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            color: black;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <a href="#" id="link" onmouseover="highlightBoldWords()" onmouseout="removeHighlight()">Hover here to bold the keywords in below paragraph</a>
+    </p>
+
+    <p id="para">
+        The <b>JavaScript</b> is a <b>programming language</b> used to create and manage dynamic web pages. It's the third layer of web technologies, along with HTML and CSS. JavaScript is based on the syntax of <b>Java and C</b>, and supports <b>object-oriented</b> and functional programming.
+    </p>
+
+
+    <script>
+        const boldWords = document.querySelectorAll('#para b');
+        const highlightBoldWords = () => {
+            boldWords.forEach(word => word.classList.add('highlight'));
+        };
+
+        const removeHighlight = () => {
+            boldWords.forEach(word => word.classList.remove('highlight'));
+        };
+
+        const hoverLink = document.getElementById('link');
+        hoverLink.addEventListener('mouseover', highlightBoldWords);
+        hoverLink.addEventListener('mouseout', removeHighlight);
+    </script>
+</body>
+</html>

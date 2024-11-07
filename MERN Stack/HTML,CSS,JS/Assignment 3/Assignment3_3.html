@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="remove" >
+        <option value="">--------Select---------</option>
+        <option value="">Java</option>
+        <option value="">DSA</option>
+        <option value="">OS</option>
+        <option value="">DBT</option>
+        <option value="">WPT</option>
+    </select><br><br>
+    <input type="submit" value="Click me" onclick="remove()">
+
+    <script>
+        function remove(){
+            var rem = document.getElementById("remove")
+            // var selectedOption = rem.options[rem.selectedIndex];
+            rem.remove(rem.selectedIndex);
+        }
+    </script>
+</body>
+</html>
